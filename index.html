@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Art Gallery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f7f7f7; /* Off-white background */
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            color: white;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        #gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        figure {
+            margin: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border: 2px solid #333; /* Dark border */
+            border-radius: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            margin-top: 10px;
+        }
+
+        #artist-info {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        #more-artists {
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        #login {
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        #marketplace {
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="fade-in" id="halo-effect-container">
+            <h1>Welcome to the Art Gallery</h1>
+            <p>Explore a world of creativity through stunning artworks.</p>
+        </div>
+        
+    </div>
+    </header>
+    <script>
+        VANTA.HALO({
+            el: "#halo-effect-container",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            baseColor: 0x030303, // Background color (black in this example)
+            backgroundColor: 0x030303, // Halo color (black in this example)
+        });
+    </script>
+</body>
+</html>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#artist-info">About the Artist</a>
+        <a href="#login">Login</a>
+        <a href="#more-artists">More Artists</a>
+        <a href="#marketplace">Marketplace</a>
+    </nav>
+    <div class="pic-ctn">
+        <img src="https://picsum.photos/200/300?t=1" alt="" class="pic">
+        <img src="https://picsum.photos/200/300?t=2" alt="" class="pic">
+        <img src="https://picsum.photos/200/300?t=3" alt="" class="pic">
+        <img src="https://th.bing.com/th/id/OIP.2C4ap62_UtK26zHglUvHiwHaGK?w=204&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" class="pic">
+        <img src="https://th.bing.com/th?q=Oil+Paintings+Art+Gallery&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dp
+        r=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="" class="pic">
+      </div>
+    
+    <section id="artist-info">
+        <h2>About the Artist</h2>
+        <p>This gallery features the works of a talented artist. Explore their unique style and creativity.</p>
+    </section>
+
+    <section id="login">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+    <section id="more-artists">
+        <h2>More Artists</h2>
+        <p>Explore the works of more talented artists in our gallery.</p>
+        <figure>
+            <img src="https://th.bing.com/th/id/OIP._O6wGrGLzVZclRzFiZ0xjQHaE8?w=298&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Art 6">
+            <figcaption>Artwork 1</figcaption>
+        </figure>
+        <figure>
+            <img src="https://th.bing.com/th/id/OIP.JtDg-EOK_oyvvCwESFJ0ZwHaG_?w=190&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Art 7">
+            <figcaption>Artist 2</figcaption>
+        </figure>
+    </section>
+
+    <section id="marketplace">
+        <h2>Art Marketplace</h2>
+        <p>Discover and purchase unique artworks from talented artists.</p>
+    </section>
+
+    <footer>
+        <p>Contact: info@artgallery.com</p>
+        <p>&copy; 2023 Art Gallery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add smooth scrolling to the navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    behavior: 'smooth',
+                    top: targetElement.offsetTop
+                });
+            });
+        });
+    </script>
+    <script src="hammer.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
